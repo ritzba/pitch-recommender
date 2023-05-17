@@ -12,6 +12,8 @@ Managers and pitching coaches should be able to harness this data during the cou
     
 ## Problem Statement
 
+Develop a machine learning model which can assess pitcher fatigue using live, in-game mechanical measurements such as velocity and release point.  The strategy chosen for this model is to use this data in light of league averages and the pitcher's own history to predict the pitcher's "pitch number equivalent."
+
 ##  The Data
 
 MLB releases its data publicly through an API.  I have used two Python wrappers (pybaseball for past pitches and MLB-StatsApi for live pitches) to simplify the process of data retrieval.  The relevant data includes the following (all dtypes are Float64 unless specified otherwise):
@@ -31,7 +33,7 @@ z = vertical
     ** x and z directions measured in feet, y direction measured in inches
 *  vx0, vy0, vz0 - initial velocity in x, y, z directions (feet/sec)
 *  ax, ay, az - acceleration in x, y, z directions (feet/sec ^ 2)
-* 
+    
 ##  Analysis
 
 ### Areas of Inquiry
